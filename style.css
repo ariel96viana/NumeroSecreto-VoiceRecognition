@@ -67,3 +67,28 @@ h3 {
   margin-top: 40px;
   color: var(--secondary-color);
 }
+
+@media screen and (max-width: 500px) {
+  h1 {
+    font-size: 3em;
+  }
+
+  h2 {
+    font-size: 2em;
+  }
+
+  h3 {
+    font-size: 1em;
+  }
+
+  .mensagem {
+    font-size: 1em;
+  }
+
+  .box {
+    font-size: 3em;
+  }
+  .numeroAcertado {
+    font-size: 4em;
+  }
+}
