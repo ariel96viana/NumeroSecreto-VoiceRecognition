@@ -16,10 +16,20 @@ function onSpeak(e) {
 }
 
 function exibeChuteNaTecla(chute) {
-  elementoChute.innerHTML = `
-    <div> Você disse</div>
-    <span class="box">${chute}</span>
-    `;
+  if (chute == "game over" || chute == "fim de jogo") {
+    document.body.innerHTML = `
+        <h2>FIM DE JOGO</h2>
+        <div id="chute" class="mensagem"> Você disse</div>
+        <span class="box">${chute}</span>
+        <button id="jogar-novamente" class="btn-jogar">Jogar Novamente</button>
+        `;
+    document.body.style.backgroundColor = "var(--end-color)";
+  } else {
+    elementoChute.innerHTML = `
+        <div> Você disse</div>
+        <span class="box">${chute}</span>
+        `;
+  }
 }
 
 recognition.addEventListener("end", () => recognition.start());
